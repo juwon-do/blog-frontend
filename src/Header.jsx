@@ -1,18 +1,9 @@
+import { Link } from "react-router-dom";
 export function Header() {
   return (
     <header>
-      {/* <a href="#">Home</a> | <a href="#posts-index">All posts</a> | <a href="#posts-new">New post</a> */}
-      <ul className="nav justify-content-center">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#posts-index">All posts</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#posts-new">New Post</a>
-        </li>
-      </ul>
+      <a href="/">Home</a> | <Link to="/about">About</Link> | <Link to="/signup">Sign Up</Link> | <Link to="/login">Log In</Link> |<Link to="/posts/new">New Post</Link> | 
+      
     </header>
   );
 }
