@@ -9,6 +9,7 @@ import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
 import { Routes, Route } from "react-router-dom";
 import { About } from "./About";
+import { PostShowPage } from './PostShowPage';
 
 export function Content() {
   const [posts, setPosts] = useState([]);
@@ -62,7 +63,7 @@ export function Content() {
         <Route path="/posts/new" element={<PostNew /> } />
         <Route path="/" element={<PostIndex posts={posts} onSelectPost={handleShowPost}/> } />
         <Route path="/posts" element={<PostIndex posts={posts} onSelectPost={handleShowPost}/> } />
-        
+        <Route path="posts/:id" element = {<PostShowPage/>} />
       </Routes>
 
       <LogoutLink />
